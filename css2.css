@@ -7,47 +7,40 @@ body {
 }
 
 ul {
-    position: relative;
-}
-
-* {
-    font-family: fantasy;
-}
-
-ul li {
+    margin: 300px 200px;
+    padding: 0px;
     list-style: none;
-    font-size: 4em;
-    margin: 0 20px;
-    font-size: 4em;
-    position: relative;
+    display: flex;
+
 }
 
-ul li a {
-    position: relative;
-    color: yellowgreen;
+li{
+    list-style: none;
+    padding: 10px 20px ;
+}
+
+a{
     text-decoration: none;
-    font-weight: 700;
+    color: yellow;
+
+     position: relative;
 }
 
-ul li a:before {
-    content: attr(data-anima);
+li a:before{
+    content: "";
+    height: 4px;
+    top: 100%;
+    left: 0px   ;
+    width: 0px;
+    background: palegreen;
     position: absolute;
-    top: 0;
-    color: pink;
-    white-space: nowrap;
-    width: 174.323px; /* Adicione uma largura inicial */
-    overflow: hidden; /* Adicione overflow: hidden para esconder o conteúdo ao início */
+    transition: .5s;
 }
 
-ul li:hover a:before {
-    animation: animate 0.5s steps(6) forwards;
+
+li:hover a:before{
+    width: 50%;
+    transform: translateX(100%);
 }
 
-@keyframes animate {
-    0% {
-        width: 174.323px;
-    }
-    100% {
-        width: 0px;
-    }
-}
+
