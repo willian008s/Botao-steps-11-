@@ -1,0 +1,53 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: green;
+}
+
+ul {
+    position: relative;
+}
+
+* {
+    font-family: fantasy;
+}
+
+ul li {
+    list-style: none;
+    font-size: 4em;
+    margin: 0 20px;
+    font-size: 4em;
+    position: relative;
+}
+
+ul li a {
+    position: relative;
+    color: yellowgreen;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+ul li a:before {
+    content: attr(data-anima);
+    position: absolute;
+    top: 0;
+    color: pink;
+    white-space: nowrap;
+    width: 174.323px; /* Adicione uma largura inicial */
+    overflow: hidden; /* Adicione overflow: hidden para esconder o conteúdo ao início */
+}
+
+ul li:hover a:before {
+    animation: animate 0.5s steps(6) forwards;
+}
+
+@keyframes animate {
+    0% {
+        width: 174.323px;
+    }
+    100% {
+        width: 0px;
+    }
+}
